@@ -1,5 +1,9 @@
 package com.oraclejava.spring.sample1;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+@Component
 public class SampleBean {
 	
 	private FirstBean firstBean;
@@ -10,6 +14,7 @@ public class SampleBean {
 		
 	}
 	
+	@Autowired
 	public SampleBean(FirstBean firstBean, SecondBean secondBean) {
 		this.firstBean = firstBean;
 		this.secondBean = secondBean;
